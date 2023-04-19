@@ -34,7 +34,7 @@ video {
 .wrapper {
   background-color: var(--dark-cyan);
   position: relative;
-  width: 144rem;
+  max-width: 144rem;
   height: 72rem;
   margin: 0 auto;
   display: grid;
