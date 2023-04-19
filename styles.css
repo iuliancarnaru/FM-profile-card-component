@@ -1,0 +1,137 @@
+:root {
+  --dark-cyan: #19a2ae;
+  --very-dark-desaturated-blue: #2d3248;
+  --dark-grayish-blue: #6a6f81;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  background-color: var(--dark-cyan);
+  position: relative;
+  width: 144rem;
+  height: 72rem;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.pattern__top-left,
+.pattern__bottom-right {
+  position: absolute;
+  z-index: -1;
+}
+
+.pattern__top-left {
+  top: -50rem;
+  left: -29rem;
+  rotate: 20deg;
+}
+
+.pattern__bottom-right {
+  bottom: -65rem;
+  right: -23rem;
+  rotate: 20deg;
+}
+
+.card {
+  max-width: 35rem;
+  background: #ffffff;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:is(.card__content--image) img {
+  background-color: grey;
+  border-radius: 50%;
+  margin-top: -50%;
+  outline: 0.5rem solid #fff;
+}
+
+.card__content--name {
+  margin-top: 2.4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+:is(.card__content--name) span {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.card__content--location {
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card__content--stats {
+  display: flex;
+  justify-content: center;
+  gap: 4.6rem;
+  padding: 2.4rem 0;
+  border-top: 1px solid #e8e9ec;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  width: 100%;
+}
+
+:is(.card__content--stats) span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 1.5px;
+}
+
+:is(
+    .card__content--stats-followers,
+    .card__content--stats-likes,
+    .card__content--stats-photos
+  ) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
